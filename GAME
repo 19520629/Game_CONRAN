@@ -17,3 +17,17 @@ struct point
 {
 	int x, y;
 };
+void vetuong()
+{
+    for (int i = 0; i < 101; i++)
+    {
+        gotoxy(i, 101);
+        cout << (char)254;
+        gotoxy(0, i);
+        cout << (char)254;
+        gotoxy(i, 0);
+        cout << (char)254;
+        gotoxy(101, i);
+        cout << (char)254;
+    }
+}
