@@ -1,1 +1,33 @@
-
+#include<iostream>
+#include<conio.h>
+#include<conio.h>
+#include<Windows.h>
+using namespace std;
+void gotoxy(int x, int y)
+{
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(
+        GetStdHandle(STD_OUTPUT_HANDLE),
+        coord
+    );
+};
+void vetuong()
+{
+    for (int i = 0; i < 101; i++)
+    {
+        gotoxy(i, 101);
+        cout << (char)254;
+        gotoxy(0, i);
+        cout << (char)254;
+        gotoxy(i, 0);
+        cout << (char)254;
+        gotoxy(101, i);
+        cout << (char)254;
+    }
+}
+struct point
+{
+	int x, y;
+};
